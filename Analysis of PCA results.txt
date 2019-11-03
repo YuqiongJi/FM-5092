@@ -1,0 +1,6 @@
+########  Analysis of PCA results
+When four stocks come from one sector, the biggest eigenvalue is 1.00343384e-03, 
+the proportion of variation accounted for by which is 77.85%. When it comes to four stocks
+from different sectors, the biggest eigenvalue is 0.00095088, the proportion of 
+variation accounted for by which is 59.97%. As we can see, 59.97%<77.85%.
+The difference is mainly because stocks from the same sector have larger correlations than stocks from different sectors.
