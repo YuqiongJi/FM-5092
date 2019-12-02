@@ -8,29 +8,50 @@ namespace Trinomial_tree
 {
     class Program
     {
-        static double Delta, Gamma, Theta;
+        //state variable types
+        static double S, K, T, delta,Delta, Gamma, Theta;
+        static int N;
+        static string side, style;
         static void Main(string[] args)
         {
+            //input values of S,K,T,r,sigma,delta,N,side,style
+            Console.WriteLine("Enter the current underlying price S:");
+            S = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter the strike price K:");
+            K = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter the tenor T (year):");
+            T = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter the risk free rate:");
+            double r = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter the volatility:");
+            double sigma = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter the deviation:");
+            delta = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter the number of steps:");
+            N = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter Call or Put:");
+            side = Console.ReadLine();
+            Console.WriteLine("Enter American or European:");
+            style = Console.ReadLine();
+
+            //calculate greek values Vega,rho
             double Vega, Rho;
-            Vega = (Trinomaltree(100, 105, 0.06, 0.2 + 0.00001, 1, 5, 0.05, "Call", "American") - Trinomaltree(100, 105, 0.06, 0.2 - 0.00001, 1, 5, 0.05, "Call", "American")) / 0.00002;
-            Rho = (Trinomaltree(100, 105, 0.06 + 0.00001, 0.2, 1, 5, 0.05, "Call", "American") - Trinomaltree(100, 105, 0.06 - 0.00001, 0.2, 1, 5, 0.05, "Call", "American")) / 0.00002;
+            Vega = (Trinomaltree(0.06, 0.2 + 0.00001) - Trinomaltree(0.06, 0.2 - 0.00001) )/ 0.00002;
+            Rho = (Trinomaltree( 0.06 + 0.00001, 0.2) - Trinomaltree( 0.06 - 0.00001, 0.2)) / 0.00002;
+            
+            //ouput results
             Console.WriteLine("Optionvalue is:");
-            Console.WriteLine(Trinomaltree(100, 105, 0.06, 0.2, 1, 5, 0.05, "Call", "American"));
-            Console.WriteLine("Delta is:");
-            Console.WriteLine(Delta);
-            Console.WriteLine("Gamma is:");
-            Console.WriteLine(Gamma);
-            Console.WriteLine("Theta is:");
-            Console.WriteLine(Theta);
-            Console.WriteLine("Vega is:");
-            Console.WriteLine(Vega);
-            Console.WriteLine("Rho is:");
-            Console.WriteLine(Rho);
+            Console.WriteLine(Trinomaltree( 0.06, 0.2));
+            Console.WriteLine("Delta is:"+Delta);
+            Console.WriteLine("Gamma is:"+Gamma);
+            Console.WriteLine("Theta is:"+Theta);
+            Console.WriteLine("Vega is:"+Vega);
+            Console.WriteLine("Rho is:"+Rho);
 
             Console.ReadLine();
         }
 
-        static double Trinomaltree(double S, double K, double r, double sigma, double T, int N, double delta, string side, string style)
+        static double Trinomaltree(double r, double sigma) //bulid trinomaltree model
         {
             double t, x, v, edx, pu, pm, pd, disc;
 
@@ -93,6 +114,7 @@ namespace Trinomial_tree
                 }
             }
 
+            //calculate greek values Delta,Gamma,Theta
             Delta = (optionvalue[0, 1] - optionvalue[2, 1]) / (stockvalue[0, 1] - stockvalue[2, 1]);
             Gamma = (((optionvalue[0, 1] - optionvalue[1, 1]) / (stockvalue[0, 1] - stockvalue[1, 1])) - ((optionvalue[1, 1] - optionvalue[2, 1]) / (stockvalue[1, 1] - stockvalue[2, 1]))) / (0.5 * (stockvalue[0, 1] - stockvalue[2, 1]));
             Theta = (optionvalue[1, 1] - optionvalue[0, 0]) / t;
