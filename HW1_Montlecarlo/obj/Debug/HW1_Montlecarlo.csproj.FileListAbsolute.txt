@@ -1,0 +1,9 @@
+C:\Users\Yuqiong Ji\source\repos\HW1_Montlecarlo\bin\Debug\HW1_Montlecarlo.exe.config
+C:\Users\Yuqiong Ji\source\repos\HW1_Montlecarlo\bin\Debug\HW1_Montlecarlo.exe
+C:\Users\Yuqiong Ji\source\repos\HW1_Montlecarlo\bin\Debug\HW1_Montlecarlo.pdb
+C:\Users\Yuqiong Ji\source\repos\HW1_Montlecarlo\obj\Debug\HW1_Montlecarlo.Properties.Resources.resources
+C:\Users\Yuqiong Ji\source\repos\HW1_Montlecarlo\obj\Debug\HW1_Montlecarlo.csproj.GenerateResource.cache
+C:\Users\Yuqiong Ji\source\repos\HW1_Montlecarlo\obj\Debug\HW1_Montlecarlo.exe
+C:\Users\Yuqiong Ji\source\repos\HW1_Montlecarlo\obj\Debug\HW1_Montlecarlo.pdb
+C:\Users\Yuqiong Ji\source\repos\HW1_Montlecarlo\obj\Debug\HW1_Montlecarlo.csprojAssemblyReference.cache
+C:\Users\Yuqiong Ji\source\repos\HW1_Montlecarlo\obj\Debug\HW1_Montlecarlo.Form1.resources
