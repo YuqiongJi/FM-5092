@@ -1,0 +1,9 @@
+C:\Users\Yuqiong Ji\source\repos\HW2_Antithetic_variance_reduction\obj\Debug\HW2_Antithetic_variance_reduction.csprojAssemblyReference.cache
+C:\Users\Yuqiong Ji\source\repos\HW2_Antithetic_variance_reduction\obj\Debug\HW2_Antithetic_variance_reduction.Form1.resources
+C:\Users\Yuqiong Ji\source\repos\HW2_Antithetic_variance_reduction\obj\Debug\HW2_Antithetic_variance_reduction.Properties.Resources.resources
+C:\Users\Yuqiong Ji\source\repos\HW2_Antithetic_variance_reduction\obj\Debug\HW2_Antithetic_variance_reduction.csproj.GenerateResource.cache
+C:\Users\Yuqiong Ji\source\repos\HW2_Antithetic_variance_reduction\bin\Debug\HW2_Antithetic_variance_reduction.exe.config
+C:\Users\Yuqiong Ji\source\repos\HW2_Antithetic_variance_reduction\bin\Debug\HW2_Antithetic_variance_reduction.exe
+C:\Users\Yuqiong Ji\source\repos\HW2_Antithetic_variance_reduction\bin\Debug\HW2_Antithetic_variance_reduction.pdb
+C:\Users\Yuqiong Ji\source\repos\HW2_Antithetic_variance_reduction\obj\Debug\HW2_Antithetic_variance_reduction.exe
+C:\Users\Yuqiong Ji\source\repos\HW2_Antithetic_variance_reduction\obj\Debug\HW2_Antithetic_variance_reduction.pdb
