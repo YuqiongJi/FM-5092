@@ -34,26 +34,25 @@ namespace HW2_Antithetic_variance_reduction
         }
 
         //Calculate the standard error
-
+        
         public static double StandardError()
         {
             double SD;
             double SE;
             double d = 0;
-            double e = 0;
-            double mean;
             double C0 = Europeanoptions.Optionvalue();
+            double[,] SimulatedPriceMatrix = Simulator.SimulatedPrice();
             if (Isantithetic == false)
             {
                 for (int i = 0; i < Nsim; i++)
                 {
                     if (Iscall == true)
                     {
-                        d += Math.Pow(Math.Exp(-r * T) * Math.Max(Simulator.SimulatedPrice()[i, Steps] - K, 0) - C0, 2.0);
+                        d += Math.Pow(Math.Exp(-r * T) * Math.Max(SimulatedPriceMatrix[i, Steps] - K, 0) - C0, 2.0);
                     }
                     else
                     {
-                        d += Math.Pow(Math.Exp(-r * T) * Math.Max(K- Simulator.SimulatedPrice()[i, Steps], 0) - C0, 2.0);
+                        d += Math.Pow(Math.Exp(-r * T) * Math.Max(K- SimulatedPriceMatrix[i, Steps], 0) - C0, 2.0);
                     }
                     
                 }
@@ -68,28 +67,25 @@ namespace HW2_Antithetic_variance_reduction
                 {
                     for (int i = 0; i < Nsim / 2; i++)
                     {
-                        pair[i] = Math.Exp(-r * T) * (Math.Max(Simulator.SimulatedPrice()[i, Steps] - K, 0) + Math.Max(Simulator.SimulatedPrice()[i + Nsim / 2, Steps] - K, 0)) / 2;
-                        e = e + pair[i];
-
+                       
+                        pair[i] = Math.Exp(-r * T) * (Math.Max(SimulatedPriceMatrix[i, Steps] - K, 0) + Math.Max(SimulatedPriceMatrix[i + (Nsim / 2), Steps] - K, 0)) / 2;
                     }
                 }
                 else
                 {
                     for (int i = 0; i < Nsim / 2; i++)
                     {
-                        pair[i] = Math.Exp(-r * T) * (Math.Max(K - Simulator.SimulatedPrice()[i, Steps], 0) + Math.Max(K - Simulator.SimulatedPrice()[i + Nsim / 2, Steps], 0)) / 2;
-                        e = e + pair[i];
+                        
+                        pair[i] = Math.Exp(-r * T) * (Math.Max(K - SimulatedPriceMatrix[i, Steps], 0) + Math.Max(K - SimulatedPriceMatrix[i + (Nsim / 2), Steps], 0)) / 2;
 
                     }
                 }
-                mean = e / (Nsim / 2);
-
                 for (int i = 0; i < Nsim / 2; i++)
                 {
-                    d = d + Math.Pow(pair[i] - mean, 2.0);
+                    d += Math.Pow(pair[i] - C0, 2.0);
                 }
-                double variance = d / (Nsim / 2 - 1);
-                SE = Math.Sqrt(variance / (Nsim / 2));               
+                double variance = d / (double)((Nsim / 2) - 1);
+                SE = Math.Sqrt(variance / (double)(Nsim / 2));               
 
             }
             return SE;

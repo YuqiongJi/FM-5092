@@ -61,6 +61,7 @@ namespace HW2_Antithetic_variance_reduction
                 }
 
                 EurOption.RandNumbers = Simulator.GetRandMatrix();
+                
 
                 double optionprice = Europeanoptions.Optionvalue();
                 label1.Text = Convert.ToString(optionprice);

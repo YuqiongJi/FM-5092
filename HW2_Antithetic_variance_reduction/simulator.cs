@@ -22,13 +22,13 @@ namespace HW2_Antithetic_variance_reduction
         public bool Side { get { return Iscall; } set { Iscall = value; } } // call or put
         public bool Antithetic { get { return Isantithetic; } set { Isantithetic = value; } }
         public double[,] RandNumbers { get { return RandMatrix; } set { RandMatrix = value; } }
-
+        
 
 
         //This method generates a matrix of random values that can be used when creating simulated prices.
 
         static Random rand = new Random();
-        static double x1, x2, z3, w;
+        static double x1, x2, z3,z4, w;
         public static int Nsim;
     
         public static double[,] GetRandMatrix()
@@ -38,7 +38,7 @@ namespace HW2_Antithetic_variance_reduction
 
             if (Isantithetic == false)
             {
-                for (int i = 0; i < Nsim; i++)
+                for (int i = 0; i < Nsim/2; i++)
                 {
                     for (int j = 0; j < Steps; j++)
                     {
@@ -49,7 +49,9 @@ namespace HW2_Antithetic_variance_reduction
                             w = x1 * x1 + x2 * x2;
                         } while (w > 1);              //If w > 1, repeat the first two steps, if not, continue
                         z3 = Math.Sqrt(-2 * Math.Log(w) / w) * x1;
+                        z4 = Math.Sqrt(-2 * Math.Log(w) / w) * x2;
                         matrix[i, j] = z3;
+                        matrix[i + Nsim / 2, j] = z4;
                     }
                 }
             }
@@ -75,17 +77,15 @@ namespace HW2_Antithetic_variance_reduction
             return matrix;
         }
 
-
+        
 
         public static double[,] SimulatedPrice()
         {
-            // Dimension Matrix and give it the first value
-
-            Double[,] SimulatedPriceMatrix = new double[Nsim, Steps + 1];
-
+            // Dimension Matrix and give it the first value            
+            Double[,] Price = new double[Nsim, Steps + 1];
             for (int i = 0; i < Nsim; i++)
             {
-                SimulatedPriceMatrix[i, 0] = S0;
+                Price[i, 0] = S0;
                
             }
 
@@ -95,11 +95,14 @@ namespace HW2_Antithetic_variance_reduction
             {
                 for (int j = 1; j < (Steps + 1); j++)
                 {
-                    SimulatedPriceMatrix[i, j] = SimulatedPriceMatrix[i, j - 1] * Math.Exp((r - 0.5 * Math.Pow(vol, 2.0)) * t + vol * Math.Sqrt(t) * RandMatrix[i, j - 1]);
+                    Price[i, j] = Price[i, j - 1] * Math.Exp((r - 0.5 * Math.Pow(vol, 2.0)) * t + vol * Math.Sqrt(t) * RandMatrix[i, j - 1]);
                     
                 }
             }
-            return SimulatedPriceMatrix;
+            
+            return Price;
         }
+
+       
     }
 }
