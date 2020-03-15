@@ -1,0 +1,9 @@
+C:\Users\Yuqiong Ji\Desktop\MFM\2019 Fall\5091\homework\HW3_Delta_based_control_variate\bin\Debug\HW3_Delta_based_control_variate.exe.config
+C:\Users\Yuqiong Ji\Desktop\MFM\2019 Fall\5091\homework\HW3_Delta_based_control_variate\bin\Debug\HW3_Delta_based_control_variate.exe
+C:\Users\Yuqiong Ji\Desktop\MFM\2019 Fall\5091\homework\HW3_Delta_based_control_variate\bin\Debug\HW3_Delta_based_control_variate.pdb
+C:\Users\Yuqiong Ji\Desktop\MFM\2019 Fall\5091\homework\HW3_Delta_based_control_variate\obj\Debug\HW3_Delta_based_control_variate.csprojAssemblyReference.cache
+C:\Users\Yuqiong Ji\Desktop\MFM\2019 Fall\5091\homework\HW3_Delta_based_control_variate\obj\Debug\HW3_Delta_based_control_variate.Form1.resources
+C:\Users\Yuqiong Ji\Desktop\MFM\2019 Fall\5091\homework\HW3_Delta_based_control_variate\obj\Debug\HW3_Delta_based_control_variate.Properties.Resources.resources
+C:\Users\Yuqiong Ji\Desktop\MFM\2019 Fall\5091\homework\HW3_Delta_based_control_variate\obj\Debug\HW3_Delta_based_control_variate.csproj.GenerateResource.cache
+C:\Users\Yuqiong Ji\Desktop\MFM\2019 Fall\5091\homework\HW3_Delta_based_control_variate\obj\Debug\HW3_Delta_based_control_variate.exe
+C:\Users\Yuqiong Ji\Desktop\MFM\2019 Fall\5091\homework\HW3_Delta_based_control_variate\obj\Debug\HW3_Delta_based_control_variate.pdb
