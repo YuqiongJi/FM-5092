@@ -1,0 +1,9 @@
+C:\Users\Yuqiong Ji\source\repos\HW4_Multithreading\bin\Debug\HW4_Multithreading.exe.config
+C:\Users\Yuqiong Ji\source\repos\HW4_Multithreading\bin\Debug\HW4_Multithreading.exe
+C:\Users\Yuqiong Ji\source\repos\HW4_Multithreading\bin\Debug\HW4_Multithreading.pdb
+C:\Users\Yuqiong Ji\source\repos\HW4_Multithreading\obj\Debug\HW4_Multithreading.csprojAssemblyReference.cache
+C:\Users\Yuqiong Ji\source\repos\HW4_Multithreading\obj\Debug\HW4_Multithreading.Properties.Resources.resources
+C:\Users\Yuqiong Ji\source\repos\HW4_Multithreading\obj\Debug\HW4_Multithreading.csproj.GenerateResource.cache
+C:\Users\Yuqiong Ji\source\repos\HW4_Multithreading\obj\Debug\HW4_Multithreading.exe
+C:\Users\Yuqiong Ji\source\repos\HW4_Multithreading\obj\Debug\HW4_Multithreading.pdb
+C:\Users\Yuqiong Ji\source\repos\HW4_Multithreading\obj\Debug\HW4_Multithreading.Form1.resources
