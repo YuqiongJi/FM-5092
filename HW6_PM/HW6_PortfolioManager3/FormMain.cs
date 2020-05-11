@@ -216,7 +216,7 @@ namespace HW6_PortfolioManager3
                             {
                                 delta = -1 * d.Quantity;
                             }
-                            listView1.Items[i].SubItems[7].Text = price.First().ToString();
+                            listView1.Items[i].SubItems[7].Text = SpotPrice.ToString();
                             listView1.Items[i].SubItems[8].Text = pl.ToString();
                             listView1.Items[i].SubItems[9].Text = delta.ToString();
                             listView1.Items[i].SubItems[10].Text = gamma.ToString();

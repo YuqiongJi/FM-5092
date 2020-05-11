@@ -1,3 +1,7 @@
+
+Hope these  instructions can help you evaluate my portfolio manager tool faster.
+
+
 1. When started run, some sample data will be added into database automatically. 
    You can delete these data later.
 
@@ -17,3 +21,6 @@
 6.enter an Volatility, update data, then click "Calculate" to get simulated price, P&L, all greeks value.
 
 7. Select some trades, you can see their Total P&L, Total greek values.
+
+
+Thanks for use!
