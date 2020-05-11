@@ -35,7 +35,7 @@ namespace HW6_PortfolioManager3
                     using (var db = new Model1Container())
                     {
 
-                        if (!db.Trades.Any(x => x.TimeStamp == dateTimePicker1.Value))
+                        if (!db.Trades.Any(x => x.TimeStamp == dateTimePicker1.Value && x.InstrumentId == Convert.ToInt32(comboBox1.SelectedValue)))
                         {
                             if (radioButtonBuy.Checked == true)
                             {
