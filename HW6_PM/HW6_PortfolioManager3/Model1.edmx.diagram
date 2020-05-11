@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7b2165f3f18f4fc180dd992ee722db1b" Name="Diagram1" ZoomLevel="86" >
+        <EntityTypeShape EntityType="Model1.Instrument" Width="1.5" PointX="1.25" PointY="1.5" />
+        <EntityTypeShape EntityType="Model1.Underlying" Width="1.5" PointX="3.875" PointY="1.5" />
+        <EntityTypeShape EntityType="Model1.Price" Width="1.5" PointX="6.25" PointY="1.5" />
+        <EntityTypeShape EntityType="Model1.InstType" Width="1.5" PointX="3.875" PointY="4.375" />
+        <EntityTypeShape EntityType="Model1.Trade" Width="1.5" PointX="1.125" PointY="6.375" />
+        <EntityTypeShape EntityType="Model1.InterestRate" Width="1.5" PointX="6.375" PointY="4.25" />
+        <AssociationConnector Association="Model1.UnderlyingPrice" />
+        <AssociationConnector Association="Model1.InstrumentInstType" />
+        <AssociationConnector Association="Model1.InstrumentUnderlying" />
+        <AssociationConnector Association="Model1.InstrumentTrade" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

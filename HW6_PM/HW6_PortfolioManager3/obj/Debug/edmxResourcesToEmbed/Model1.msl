@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="Model1Container">
+    <EntitySetMapping Name="Instruments">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Instrument)">
+        <MappingFragment StoreEntitySet="Instruments">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Strike" ColumnName="Strike" />
+          <ScalarProperty Name="Tenor" ColumnName="Tenor" />
+          <ScalarProperty Name="CallPut" ColumnName="CallPut" />
+          <ScalarProperty Name="Rebate" ColumnName="Rebate" />
+          <ScalarProperty Name="Barrier" ColumnName="Barrier" />
+          <ScalarProperty Name="BarrierType" ColumnName="BarrierType" />
+          <ScalarProperty Name="Exchange" ColumnName="Exchange" />
+          <ScalarProperty Name="InstrumentName" ColumnName="InstrumentName" />
+          <ScalarProperty Name="InstTypeId" ColumnName="InstTypeId" />
+          <ScalarProperty Name="UnderlyingId" ColumnName="UnderlyingId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Underlyings">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Underlying)">
+        <MappingFragment StoreEntitySet="Underlyings">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="Ticker" ColumnName="Ticker" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Prices">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Price)">
+        <MappingFragment StoreEntitySet="Prices">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="ClosingPrice" ColumnName="ClosingPrice" />
+          <ScalarProperty Name="UnderlyingId" ColumnName="UnderlyingId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InstTypes">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.InstType)">
+        <MappingFragment StoreEntitySet="InstTypes">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Trades">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Trade)">
+        <MappingFragment StoreEntitySet="Trades">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BuySell" ColumnName="BuySell" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="TradePrice" ColumnName="TradePrice" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="InstrumentId" ColumnName="InstrumentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InterestRates">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.InterestRate)">
+        <MappingFragment StoreEntitySet="InterestRates">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Tenor" ColumnName="Tenor" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
